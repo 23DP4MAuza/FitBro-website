@@ -1,28 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitBro - Fitness Goals</title>
-    <link rel="stylesheet" href="src/css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitBro - Fitness Tracker</title>
+  <link rel="stylesheet" href="src/css/main.css"/>
 </head>
 <body>
+  <header>
     <nav>
-        <div class="logo">FitBro</div>
-        <div class="nav-links">
-            <a href="about">About us</a>
-            <a href="features">Features</a>
-            <a href="reviews">Reviews</a>
-            <a href="download" class="nav-download-btn">Download</a>
-        </div>
+      <div class="logo">FitBro</div>
+      <div class="nav-links">
+        <a href="#about">About us</a>
+        <a href="#what-is-fitbro">What is FitBro?</a>
+        <a href="#features">Features</a>
+        <a href="#reviews">Reviews</a>
+        <a class="nav-download-btn" href="#download">Download</a>
+      </div>
     </nav>
+  </header>
 
-    <section class="hero">
-        <div class="content">
-            <h1>Your first step into achieving your fitness goals</h1>
-            <p>get started today</p>
-            <button class="download-btn">Download</button>
-        </div>
-    </section>
+  <section id="about" class="hero">
+    <div class="content">
+      <div class="text-block">
+        <h1>Your first step into achieving your fitness goals</h1>
+        <p class="paragraph-undertext">get started today</p>
+      </div>
+      <button class="download-btn">Download</button>
+    </div>
+    <img class="hero-image" src="src/img/running-man-transparent-png-sticker-running-pluspngcom-running-person-png-hd-active-person-png-530_540.png" alt="Athletes running" />
+  </section>
+
+  <section id="what-is-fitbro" class="what-is-fitbro">
+    <h2>What is FitBro?</h2>
+    <p>
+      FitBro is the ultimate fitness tracker designed to help you take control of your fitness journey. With features like workout logging, goal setting, and tracking progress over time, FitBro makes it easy to stay on top of your fitness routine. Log your workouts, monitor calories burned, and track the time spent on each session. Set specific goals—whether for weight loss, strength, or endurance—and watch your progress unfold. FitBro also helps you balance calorie intake with energy expenditure, ensuring you stay aligned with your fitness and nutrition goals. Stay motivated, stay focused, and see real results with FitBro.
+    </p>
+  </section>
+
+  <section id="features" class="container">
+    <h1>What can FitBro do?</h1>
+    <ul class="feature-list">
+      <li>Light weight jars based terminal program</li>
+      <li>Log workouts</li>
+      <li>Set fitness goals</li>
+      <li>Track overtime progression</li>
+      <li>Calories burnt during training</li>
+      <li>Time spent working out</li>
+      <li>Track calories</li>
+    </ul>
+  </section>
+
+  <section id="reviews" class="testimonials">
+    <h2>Here is what our users think!</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p class="testimonial-text">After trying literally every fitness app out there, I can confidently say FitBro is in a league of its own. Those other apps claim to help you track your workouts, but they’re so loaded with ads and endless pop-ups, it’s like they’re trying to sell you something instead of helping you get fit. Whether you’re tracking strength, endurance, or just trying to keep your calories in check, FitBro nails it. If you want an app that actually supports your fitness journey without the distractions.</p>
+        <p class="testimonial-author">- Dana White</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">Finally, an app that actually gets it! FitBro is everything I was hoping for and more. Unlike other apps that just throw a bunch of useless features at you (looking at you, MyFitnessPal), FitBro keeps it simple and effective. The workout logging is super easy, the progress tracking is spot on. Plus, other fitness apps make you jump through hoops just to set a goal. FitBro? It’s all streamlined and intuitive. 
+        </p>
+        <p class="testimonial-author">- Greg Doucette</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">While other apps give you a bunch of charts and graphs that make you feel like you're doing something right, FitBro actually helps you track your progress in a way that matters. The workout logging is fast and accurate, and the way it helps me balance my calorie intake and calories burned is on point. If you're tired of fitness apps that promise a lot and deliver nothing, FitBro is the opposite.</p>
+        <p class="testimonial-author">- Tien Twins</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="fourth-content">
+    <h4>Download now, and start progressing with ease!</h4>
+    <button class="green-download-btn">Download</button>
+  </section>
+
+  <div class="floating-dumbbells">
+    <div class="dumbbell left"></div>
+    <div class="dumbbell right"></div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <span>© 2023 FitBro. All rights reserved.</span>
+      <a href="#" class="legal-link">Legal</a>
+    </div>
+  </footer>
 </body>
 </html>

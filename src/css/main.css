@@ -1,95 +1,436 @@
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #50E9A1;
+    font-family: Arial, sans-serif;
 }
 
-nav {
+html {
+    scroll-behavior: smooth;
+}
+
+
+header {
+    background-color: #34C759; 
+    padding: 20px 50px;
+}
+
+header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background-color: #50E9A1;
-    box-shadow: #50E9A1;
+    flex-wrap: wrap;
 }
 
-.logo {
+header .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: black;
 }
 
-.nav-links {
+header .nav-links {
     display: flex;
-    gap: 30px;
-    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
 }
 
-.nav-links a {
+header .nav-links a:not(.nav-download-btn) {
+    color: #000;
     text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: #007bff;
+header .nav-links a:hover {
+    color: #ccc;
+}
+
+.nav-download-btn {
+    color: #fff;
+    background-color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.nav-download-btn:hover {
+    background-color: #333;
 }
 
 .hero {
-    text-align: left;
+    background-color: #34C759; 
     padding: 100px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #000; 
+    position: relative;
 }
 
-.content {
-    max-width: 800px;
-    margin: 0 left;
+.hero .text-block {
+    flex: 1 1 500px;
+    max-width: 700px;
+    z-index: 1;
 }
 
 .hero h1 {
-    font-size: 36px;
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.hero .download-btn {
+    background-color: #fff;
+    color: #000; 
+    padding: 12px 28px;
+    border: none;
+    border-radius: 50px; 
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.hero .hero-image {
+    max-width: 400px;
+    flex: 1 1 300px;
+    align-self: flex-end;
+}
+
+
+.container {
+    background-color: #fff;
+    padding: 80px 5vw;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+.feature-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.feature-list li {
+    background-color: #e8f5e9;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1 1 280px;
+    max-width: 320px;
+    border: 2px solid #34C759;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(52, 199, 89, 0.3);
+}
+
+.feature-list li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #34C759;
+}
+
+
+.what-is-fitbro {
+    background-color: #fff;
+    padding: 80px 5vw;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.what-is-fitbro h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.what-is-fitbro p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.8;
+}
+
+
+.testimonials {
+    background-color: #fff;
+    padding: 80px 5vw;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+.testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background-color: #34C759;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    max-width: 360px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-text {
+    font-size: 16px;
+    line-height: 1.6;
     margin-bottom: 20px;
     color: #333;
 }
 
-.hero p {
-    font-size: 18px;
+.testimonial-author {
+    font-weight: bold;
     color: #333;
-    margin-bottom: 30px;
+    font-style: italic;
 }
 
-.download-btn {
-    background-color: white;
-    color: #333;
-    padding: 12px 30px;
+
+.fourth-content {
+    background-color: #fff;
+    padding: 80px 5vw;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.fourth-content h4 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #000;
+    z-index: 2;
+    position: relative;
+}
+
+.green-download-btn {
+    background-color: #34C759;
+    color: #fff;
     border: none;
+    padding: 18px 40px;
     border-radius: 50px;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(52, 199, 89, 0.4);
     cursor: pointer;
+    animation: pulse 2s infinite;
+    transition: all 0.4s ease;
 }
 
-.download-btn:hover {
-    background-color: #10CD75;
+.green-download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(52, 199, 89, 0.6);
+    background-color: #2DB34A;
 }
 
+.site-footer {
+    background-color: #2DB34A;
+    padding: 15px 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
 
-.nav-download-btn {
-    background-color: #333; 
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 50px;
+.site-footer span {
+    font-weight: bold;
+    color: #000;
+}
+
+.site-footer .legal-link {
+    font-weight: bold;
+    color: #000;
     text-decoration: none;
 }
 
-.nav-download-btn:hover {
-    background-color: #10CD75; 
+.floating-dumbbells {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.dumbbell {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    background: #34C759;
+    border-radius: 10px;
+}
+
+.dumbbell::before,
+.dumbbell::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 60px;
+    background: #34C759;
+    border-radius: 10px;
+}
+
+.left {
+    top: 50%;
+    left: 10%;
+    animation: floatLeft 8s ease-in-out infinite;
+}
+
+.right {
+    top: 80%;
+    right: 10%;
+    animation: floatRight 7s ease-in-out infinite;
+}
+
+.dumbbell.left::before,
+.dumbbell.right::before {
+    left: -15px;
+    top: -20px;
+}
+
+.dumbbell.left::after,
+.dumbbell.right::after {
+    right: -15px;
+    top: -20px;
+}
+
+@keyframes floatLeft {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+}
+
+@keyframes floatRight {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(20px) rotate(-10deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .hero .hero-image {
+        position: static;
+        margin-top: 40px;
+        width: 100%;
+        max-width: 300px;
+        align-self: center;
+    }
+
+    .testimonial-card {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .feature-list li {
+        flex: 1 1 45%;
+    }
+
+    .testimonial-card {
+        flex: 1 1 100%;
+    }
+
+    .dumbbell {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .container,
+    .testimonials,
+    .fourth-content {
+        padding: 50px 20px;
+    }
+
+    .feature-list li {
+        flex: 1 1 100%;
+    }
+
+    .testimonial-card {
+        flex: 1 1 100%;
+    }
 }
