@@ -1,22 +1,30 @@
-
+/* ===== GLOBAL STYLES ===== */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 80px; 
+}
 
+/* ===== HEADER & NAVIGATION ===== */
 header {
-    background-color: #34C759; 
-    padding: 20px 50px;
+    background-color: #34C759;
+    padding: 0 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
 header nav {
@@ -24,6 +32,9 @@ header nav {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    height: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 header .logo {
@@ -42,6 +53,7 @@ header .nav-links {
 header .nav-links a:not(.nav-download-btn) {
     color: #000;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 header .nav-links a:hover {
@@ -56,58 +68,89 @@ header .nav-links a:hover {
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    transition: background 0.3s;
+    transition: all 0.3s;
 }
 
 .nav-download-btn:hover {
     background-color: #333;
+    transform: translateY(-2px);
 }
 
+/* ===== HERO SECTION ===== */
 .hero {
-    background-color: #34C759; 
-    padding: 100px 50px;
+    background-color: #34C759;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    color: #000; 
+    color: #000;
     position: relative;
+    min-height: 300px;
 }
 
-.hero .text-block {
-    flex: 1 1 500px;
-    max-width: 700px;
+.hero .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     z-index: 1;
 }
 
-.hero h1 {
-    font-size: 56px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.hero .text-block {
+    max-width: 700px;
 }
 
-.hero p {
-    font-size: 20px;
-    margin-bottom: 40px;
+.hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .hero .download-btn {
     background-color: #fff;
-    color: #000; 
+    color: #000;
     padding: 12px 28px;
     border: none;
-    border-radius: 50px; 
-    font-size: 20px;
+    border-radius: 50px;
+    font-size: 18px;
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+    width: fit-content;
 }
 
-.hero .hero-image {
-    max-width: 400px;
-    flex: 1 1 300px;
-    align-self: flex-end;
+.hero .download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+/* ===== ABOUT SECTION ===== */
+.what-is-fitbro {
+    background-color: #fff;
+    padding: 80px 5vw;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
 
+.what-is-fitbro h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.what-is-fitbro p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.8;
+}
+
+/* ===== FEATURES SECTION ===== */
 .container {
     background-color: #fff;
     padding: 80px 5vw;
@@ -136,7 +179,7 @@ header .nav-links a:hover {
     max-width: 320px;
     border: 2px solid #34C759;
     font-size: 18px;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     position: relative;
     overflow: hidden;
 }
@@ -156,29 +199,7 @@ header .nav-links a:hover {
     background-color: #34C759;
 }
 
-
-.what-is-fitbro {
-    background-color: #fff;
-    padding: 80px 5vw;
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.what-is-fitbro h2 {
-    font-size: 32px;
-    font-weight: bold;
-    color: #000;
-    margin-bottom: 30px;
-}
-
-.what-is-fitbro p {
-    font-size: 18px;
-    color: #444;
-    line-height: 1.8;
-}
-
-
+/* ===== TESTIMONIALS SECTION ===== */
 .testimonials {
     background-color: #fff;
     padding: 80px 5vw;
@@ -206,7 +227,7 @@ header .nav-links a:hover {
     max-width: 360px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
 .testimonial-card:hover {
@@ -226,7 +247,7 @@ header .nav-links a:hover {
     font-style: italic;
 }
 
-
+/* ===== DOWNLOAD SECTION ===== */
 .fourth-content {
     background-color: #fff;
     padding: 80px 5vw;
@@ -256,7 +277,7 @@ header .nav-links a:hover {
     box-shadow: 0 4px 15px rgba(52, 199, 89, 0.4);
     cursor: pointer;
     animation: pulse 2s infinite;
-    transition: all 0.4s ease;
+    transition: all 0.4s;
 }
 
 .green-download-btn:hover {
@@ -265,6 +286,7 @@ header .nav-links a:hover {
     background-color: #2DB34A;
 }
 
+/* ===== FOOTER ===== */
 .site-footer {
     background-color: #2DB34A;
     padding: 15px 5vw;
@@ -283,8 +305,14 @@ header .nav-links a:hover {
     font-weight: bold;
     color: #000;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
+.site-footer .legal-link:hover {
+    color: #fff;
+}
+
+/* ===== ANIMATIONS & DECORATIONS ===== */
 .floating-dumbbells {
     position: absolute;
     width: 100%;
@@ -292,7 +320,7 @@ header .nav-links a:hover {
     top: 0;
     left: 0;
     pointer-events: none;
-    z-index: 1;
+    z-index: 0;
 }
 
 .dumbbell {
@@ -338,45 +366,32 @@ header .nav-links a:hover {
 }
 
 @keyframes floatLeft {
-    0%, 100% {
-        transform: translateY(0) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-20px) rotate(10deg);
-    }
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
 }
 
 @keyframes floatRight {
-    0%, 100% {
-        transform: translateY(0) rotate(0deg);
-    }
-    50% {
-        transform: translateY(20px) rotate(-10deg);
-    }
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(20px) rotate(-10deg); }
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
-
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
 @media (max-width: 1024px) {
     .hero {
+        padding: 50px 40px;
+        min-height: 400px;
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
     }
 
     .hero .hero-image {
-        position: static;
         margin-top: 40px;
         width: 100%;
         max-width: 300px;
@@ -389,9 +404,22 @@ header .nav-links a:hover {
 }
 
 @media (max-width: 768px) {
+    header {
+        padding: 0 20px;
+    }
+    
     header nav {
-        flex-direction: column;
-        gap: 15px;
+        height: auto;
+        padding: 15px 0;
+    }
+    
+    body {
+        padding-top: 100px;
+    }
+
+    .hero {
+        padding: 40px 30px;
+        min-height: 350px;
     }
 
     .hero h1 {
@@ -413,7 +441,8 @@ header .nav-links a:hover {
 
 @media (max-width: 480px) {
     .hero {
-        padding: 60px 20px;
+        padding: 30px 20px;
+        min-height: 300px;
     }
 
     .hero h1 {
